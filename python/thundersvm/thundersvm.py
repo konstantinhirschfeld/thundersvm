@@ -519,7 +519,7 @@ class SVC(SvmModel, ClassifierMixin):
                  gamma='auto', coef0=0.0, C=1.0,
                  tol=0.001, probability=False, class_weight=None,
                  shrinking=False, cache_size=None, verbose=False,
-                 max_iter=-1, n_jobs=-1, max_mem_size=-1, random_state=None, decision_function_shape='ovo', gpu_id=0):
+                 max_iter=-1, n_jobs=-1, max_mem_size=-1, random_state=298, decision_function_shape='ovo', gpu_id=0):
         self.decision_function_shape = decision_function_shape
         super(SVC, self).__init__(
             kernel=kernel, degree=degree, gamma=gamma,
@@ -537,7 +537,7 @@ class NuSVC(SvmModel, ClassifierMixin):
     def __init__(self, kernel='rbf', degree=3, gamma='auto',
                  coef0=0.0, nu=0.5, tol=0.001,
                  probability=False, shrinking=False, cache_size=None, verbose=False,
-                 max_iter=-1, n_jobs=-1, max_mem_size=-1, random_state=None, decision_function_shape='ovo', gpu_id=0):
+                 max_iter=-1, n_jobs=-1, max_mem_size=-1, random_state=298, decision_function_shape='ovo', gpu_id=0):
         self.decision_function_shape = decision_function_shape
         super(NuSVC, self).__init__(
             kernel=kernel, degree=degree, gamma=gamma,
@@ -554,7 +554,7 @@ class OneClassSVM(SvmModel):
     def __init__(self, kernel='rbf', degree=3, gamma='auto',
                  coef0=0.0, nu=0.5, tol=0.001,
                  shrinking=False, cache_size=None, verbose=False,
-                 max_iter=-1, n_jobs=-1, max_mem_size=-1, random_state=None, gpu_id=0):
+                 max_iter=-1, n_jobs=-1, max_mem_size=-1, random_state=298, gpu_id=0):
         super(OneClassSVM, self).__init__(
             kernel=kernel, degree=degree, gamma=gamma,
             coef0=coef0, C=0., nu=nu, epsilon=0.,
@@ -580,7 +580,7 @@ class SVR(SvmModel, RegressorMixin):
             coef0=coef0, C=C, nu=0., epsilon=epsilon,
             tol=tol, probability=probability, class_weight=None,
             shrinking=shrinking, cache_size=cache_size, verbose=verbose,
-            max_iter=max_iter, n_jobs=n_jobs, max_mem_size=max_mem_size, random_state=None, gpu_id=gpu_id
+            max_iter=max_iter, n_jobs=n_jobs, max_mem_size=max_mem_size, random_state=298, gpu_id=gpu_id
         )
 
 
@@ -596,6 +596,6 @@ class NuSVR(SvmModel, RegressorMixin):
             coef0=coef0, nu=nu, C=C, epsilon=0.,
             tol=tol, probability=probability, class_weight=None,
             shrinking=shrinking, cache_size=cache_size, verbose=verbose,
-            max_iter=max_iter, n_jobs=n_jobs, max_mem_size=max_mem_size, random_state=None, gpu_id=gpu_id
+            max_iter=max_iter, n_jobs=n_jobs, max_mem_size=max_mem_size, random_state=298, gpu_id=gpu_id
         )
 
